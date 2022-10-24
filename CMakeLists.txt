@@ -28,14 +28,15 @@ link_directories(
 
 set(SOURCES
     src/main.cpp
+		"includes/nolib.cpp" # related to the project, so no need to creat static lib from it
 )
 
 # if you want to build static library of core2/api2.cpp
-add_library(API2 "core2/api2.cpp")
-# set(LIBS ${LIBS} API2)
+add_library(API2 STATIC "core2/api2.cpp") # needs to create static lib from this file
+# set(LIBS ${LIBS} API2) # no need to add it to LIBS, because it will automatically added to libs folder
 
 if(WIN32)
-  set(LIBS API API2)
+  set(LIBS API API2) # API is built before and we put API.lib in the libs dir
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif(WIN32)
 

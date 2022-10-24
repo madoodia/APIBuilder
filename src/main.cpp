@@ -12,11 +12,13 @@
 // Application Libraries
 #include "api2.h"
 #include "core/api.h"
+#include "nolib.h"
 
 // Main Function
 int main()
 {
 	std::cout << "Result: " << Madoodia::add(10, 20) << std::endl;
+	std::cout << "Result: " << Madoodia::sub(10, 3) << std::endl;
 	std::cout << "Result: " << Madoodia2::add2(100, 200) << std::endl;
 	return 0;
 }
