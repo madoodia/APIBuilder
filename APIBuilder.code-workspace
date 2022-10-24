@@ -1,0 +1,22 @@
+{
+	"folders": [
+		// {
+		// 	"path": "D:/madoodia/sdks/OpenGL"
+		// },
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 2,
+		"editor.useTabStops": false,
+		"C_Cpp.clang_format_path": "",
+		"C_Cpp.clang_format_style": "file"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools"
+		]
+	}
+}
