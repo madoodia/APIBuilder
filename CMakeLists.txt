@@ -12,6 +12,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
 if(WIN32)
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libs)
+	set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/libs)
 	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 endif(WIN32)
 
@@ -24,19 +26,18 @@ link_directories(
 	libs
 )
 
-if(WIN32)
-  set(LIBS API)
-  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
-endif(WIN32)
-
-
 set(SOURCES
     src/main.cpp
 )
 
 # if you want to build static library of core2/api2.cpp
 add_library(API2 "core2/api2.cpp")
-set(LIBS ${LIBS} API2)
+# set(LIBS ${LIBS} API2)
+
+if(WIN32)
+  set(LIBS API API2)
+  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+endif(WIN32)
 
 add_executable($ENV{PROJECT_NAME} ${SOURCES})
 target_link_libraries($ENV{PROJECT_NAME} ${LIBS})
