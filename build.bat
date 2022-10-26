@@ -27,4 +27,4 @@ cmake -G "NMake Makefiles" ..
 @REM cmake -G "Visual Studio 16 2019" ../
 cmake --build . --config Debug
 
-CALL %ROOT%/%FOLDER%/bin/%BASENAME%.exe
+@REM CALL %ROOT%/%FOLDER%/bin/%BASENAME%.exe

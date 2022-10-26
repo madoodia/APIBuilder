@@ -25,9 +25,10 @@
 *.a
 
 # Executables
-*.exe
 *.out
 *.app
+*.ilk
+*.pdb
 
 **/build
 **/bin
