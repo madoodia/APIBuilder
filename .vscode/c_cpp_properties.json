@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/includes",
-                "${workspaceFolder}/core2",
+                "${workspaceFolder}/api2"
             ],
             "defines": [
                 "_DEBUG",

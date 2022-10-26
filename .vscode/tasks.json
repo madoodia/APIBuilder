@@ -5,7 +5,13 @@
 			"type": "shell",
 			"label": "build",
 			"windows": {
-				"command": "${workspaceFolder}/${relativeFileDirname}/build.bat"
+				"command": "${workspaceFolder}/build.bat",
+				"args": [
+					"${workspaceFolder}",
+					"${relativeFileDirname}",
+					"${fileBasenameNoExtension}",
+					"${workspaceFolderBasename}"
+				],
 			},
 			"linux": {
 				"command": "${workspaceFolder}/${relativeFileDirname}/build.sh"
@@ -13,12 +19,6 @@
 			"osx": {
 				"command": "${workspaceFolder}/${relativeFileDirname}/build.sh"
 			},
-			"args": [
-				"${workspaceFolder}",
-				"${relativeFileDirname}",
-				"${fileBasenameNoExtension}",
-				"${workspaceFolderBasename}"
-			],
 			"problemMatcher": [],
 			"group": "build"
 		},

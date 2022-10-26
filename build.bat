@@ -15,11 +15,11 @@ call "%VCVARS_LOCATION%/vcvarsall.bat" x64
 
 call %ROOT%/envVars.bat
 
-if exist "%ROOT%/%FOLDER%/build" (
-    rmdir /s /q "%ROOT%/%FOLDER%/build"
+if exist "%ROOT%/build" (
+    rmdir /s /q "%ROOT%/build"
 )
 
-CD %ROOT%/%FOLDER%
+CD %ROOT%
 MKDIR build
 CD build
 
@@ -27,4 +27,4 @@ cmake -G "NMake Makefiles" ..
 @REM cmake -G "Visual Studio 16 2019" ../
 cmake --build . --config Debug
 
-@REM CALL %ROOT%/%FOLDER%/bin/%BASENAME%.exe
+@REM CALL %ROOT%/bin/%BASENAME%.exe
