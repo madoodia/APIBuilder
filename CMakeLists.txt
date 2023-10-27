@@ -31,7 +31,7 @@ link_directories(
 set(SOURCES
     src/main.cpp
 		"includes/nolib.cpp" # related to the project, so no need to creat static lib from it (.lib)
-		"includes/mydll.cpp" # related to the project, so no need to creat dynamic lib from it (.dll)
+		# "includes/mydll.cpp" # related to the project, so no need to creat dynamic lib from it (.dll)
 )
 
 # if you want to build static library of api2/api2.cpp
